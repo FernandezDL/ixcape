@@ -1,0 +1,187 @@
+.eneroMainContainer{
+    width: 90%;
+    height: 600px;
+
+    background-image: url("../../public/img/calendario/enero/fondo.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardContainer {
+    position: relative; /* Necesario para el posicionamiento absoluto del botón */
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    border-radius: 25px;
+    background-color: #EDEDED;
+}
+
+.eneroButtonContainer {
+    position: absolute;
+    top: 10px; /* Ajusta según el espacio que necesites en la parte superior */
+    left: 10px; /* Ajusta según el espacio que necesites en el lateral */
+    width: 43px;
+    height: 43px;
+    background-image: url('../../public/img/cultura/botonRosa.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.eneroButtonContainer:hover {
+    background-image: url('../../public/img/cultura/botonAmarillo.svg');
+}
+
+.filas{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.fila{    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.fila button{
+    border: transparent;
+}
+
+.yellowEnero {
+    background-color: #FBB016;
+    border-top-right-radius: 25px; /* Esquina superior derecha redondeada */
+}
+
+.blue {
+    background-color: #5547FF;
+}
+
+.pink {
+    background-color: #E20077;
+}
+
+.greenEnero {
+    background-color: #4DD973;
+    border-bottom-right-radius: 25px; /* Esquina inferior derecha redondeada */
+}
+
+.firstRowContainer{
+    width: 90%;
+    height: 85%;
+
+    background-image: url("../../public/img/calendario/enero/flor.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    font-size: 60px;
+    font-weight: 800;
+
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pinkText{
+    color: #E20077;
+}
+
+.inscripcionBttn{
+    background-color: #5547FF;
+
+    height: 15%;
+    width: 50%;
+
+    color: white;
+    font-size: large;
+
+    border-radius: 25px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.inscripcionBttn:hover{
+    background-color: #E20077;
+}
+
+.cuadrado{
+    width: 60px;
+    height: 60px;
+
+    border-radius: 5px;
+
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.fila .cuadrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Asegura que esté centrado en su columna */
+}
+
+.cA{
+    color: #FBB016;
+}
+
+.cB{
+    color: #5547FF;
+}
+
+.cP{
+    color: #E20077;
+}
+
+.cG{
+    color: #4DD973;
+}
+
+.cA:hover{
+    color: white;
+    background-color: #E20077;
+}
+
+.cB:hover{
+    color: white;
+    background-color: #FBB016;
+}
+
+.cP:hover{
+    color: white;
+    background-color: #161616;
+}
+
+.cG:hover{
+    color: white;
+    background-color: #9747FF;
+}
