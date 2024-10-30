@@ -1,6 +1,19 @@
 import "./inscripcion.css";
+import Datos from "../datos/datos";
+import { useState } from "react";
+import "../calendario/calendario.css";
 
 export default function Inscripcion({onClose}){
+    const [showDatos, setShowDatos] = useState(false);
+
+    const handleClickDatos = () => {
+        setShowDatos(true);
+    };
+    
+    const handleCloseDatos = () => {
+        setShowDatos(false);
+    }; 
+
     return(
         <div className="inscripcionMainContainer">
             <div className="formularioContainer">
@@ -8,7 +21,7 @@ export default function Inscripcion({onClose}){
                 <div className="formularioHeader">FORMULACIO DE INSCRIPCIÓN</div>
 
                 <div className="formularioBody">
-                    <button className="pinkHalf">
+                    <button className="pinkHalf" onClick={handleClickDatos}>
                         <div className="flecha">
                             <img src="img/formulario/flechaBlanca.svg" alt="Flecha blanca" className="flechaImg"/>
                         </div>
@@ -16,7 +29,7 @@ export default function Inscripcion({onClose}){
                         <h1>SOLITO</h1>
                         <p>INDIVIDUAL</p>
                     </button>
-                    <button className="blueHalf">
+                    <button className="blueHalf" onClick={handleClickDatos}>
                         <div className="flecha">
                             <img src="img/formulario/flechaBlanca.svg" alt="Flecha blanca" className="flechaImg"/>
                         </div>
@@ -26,6 +39,12 @@ export default function Inscripcion({onClose}){
                     </button>
                 </div>
             </div>
+
+            {showDatos && (
+                <div className="culturaContainer show">
+                    <Datos onClose={handleCloseDatos} />
+                </div>
+            )}
         </div>
     )
 }
