@@ -1,0 +1,60 @@
+.vocesMainContainer {
+    width: 90%;
+    height: 600px;
+    background-color: #E8E8E8;
+    position: relative; /* Esto permite posicionar elementos absolutos dentro del contenedor */
+}
+
+.container2 {
+    padding: 35px;
+}
+
+.closeButtonContainer {
+    width: 63px;
+    height: 63px;
+    border: none;
+    background-image: url('../../public/img/cultura/botonRosa.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute; /* Posiciona el botón en relación al contenedor */
+    top: 50px; /* Ajusta la distancia desde la parte superior */
+    left: 50px; /* Ajusta la distancia desde el lado derecho */
+}
+
+.closeButtonContainer:hover {
+    background-image: url('../../public/img/cultura/botonAmarillo.svg');
+}
+
+.vocesImg {
+    position: absolute;
+    right: 80px; /* Pega la imagen al borde derecho del contenedor */
+    top: 50%; /* Centra la imagen verticalmente */
+    transform: translateY(-50%); /* Ajusta la posición hacia arriba para centrar */
+    height: 80%;
+    max-height: 100%; /* Asegura que no sobrepase la altura del contenedor */
+    width: auto;
+}
+
+.textoVoces{
+    font-size: 40px;
+    font-weight: 800;
+    color: #161616;
+    line-height: 1.2;
+
+    display: flex;
+
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+}
+
+.textoRosa{
+    color: #E20077;
+}

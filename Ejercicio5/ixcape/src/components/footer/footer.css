@@ -1,0 +1,33 @@
+.footerMainContainer{
+    width: 100%;
+    height: auto;
+    background-color: #ECECEC;
+}
+
+.contenido{
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logoImg{
+    width: 111.55px;
+    height: 53.44px;
+}
+
+.columnas{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.social-icons{
+    width: 247.64px;
+    height: 46.26px;
+}

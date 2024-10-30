@@ -1,0 +1,174 @@
+.cardMainContainer{
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    border-radius: 25px;
+
+    background-color: #E8E8E8;
+}
+
+.card {
+    position: relative; /* Para que los elementos hijos absolutos se posicionen en relación a este contenedor */
+    width: 100%;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.imagen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; 
+    transform: translateY(150px);
+}
+
+.firstColumn{
+    width: 80%;
+    height: 600px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../../public/img/card/piramide.svg");
+
+    font-size: 80px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    z-index: 1; /* Asegura que el texto esté sobre la imagen de fondo */
+    color: black;
+
+    margin-top: 20px;
+}
+
+.pinkText{
+    color: #E20077;
+}
+
+.column{
+    width: 100%;
+    height: 100%;
+
+    font-size: 52.64px;
+}
+
+.firstRow{
+    background-color: #FBB016;
+    border-top-right-radius: 25px;
+
+    height: 33%;
+
+    padding-left: 80px;
+    gap: 100px;
+
+    display: flex;
+    align-items: center;
+}
+.secondRow{
+    background-color: #E20077;
+    
+    height: 33%;
+    
+    padding-left: 80px;
+    gap: 100px;
+
+    display: flex;
+    align-items: center;
+}
+
+.thirdRow{
+    background-color: #5547FF;
+    border-bottom-right-radius: 25px;
+    
+    height: 34%;
+    
+    padding-left: 80px;
+    gap: 100px;
+
+    display: flex;
+    align-items: center;
+}
+
+.flechaImg{
+    width: 93px;
+    height: 80px;
+}
+
+.flechaButton {
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.flechaButton:hover .flechaImg {
+    filter: brightness(0) invert(1); /* Cambia el color de la flecha a blanco */
+}
+
+.threeButtons{
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.popUpButton{
+    width: 46px;
+    height: 45px;
+    border: transparent;
+    border-radius: 100%;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+/* Primer botón - Hover rosado */
+.popUpButton:nth-child(1):hover {
+    background-color: #E20077; /* Color rosado */
+}
+
+/* Segundo botón - Hover amarillo */
+.popUpButton:nth-child(2):hover {
+    background-color: #FBB016; /* Color amarillo */
+}
+
+/* Tercer botón - Hover verde */
+.popUpButton:nth-child(3):hover {
+    background-color: #4DD973; /* Color verde */
+}
+
+.culturaContainer {
+    position: fixed; /* Fijamos la posición en la pantalla */
+    top: 0;
+    left: 100%; /* Inicia fuera de la pantalla */
+    width: 100%;
+    height: 100vh; /* Asegura que cubra toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    z-index: 10; /* Más alto que .card para que esté encima */
+    transition: transform 0.5s ease; /* Transición suave */
+    transform: translateX(0); /* Estado inicial, fuera de la pantalla */
+}
+
+.culturaContainer.show {
+    transform: translateX(-100%); /* Mueve el componente hacia la izquierda */
+}
