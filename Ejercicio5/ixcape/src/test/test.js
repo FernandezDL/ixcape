@@ -30,7 +30,7 @@ export default function Test({onClose}){
                         <div className="firstRowSC">
                             ¡SELECCIONA TUS INTERESES!
 
-                            <button className="buttonContainer" onClick={onClose}></button>
+                            <button className="testButtonContainer" onClick={onClose}></button>
                         </div>
                         
                         Para conocer más sobre tus gustos y mostrarte todo lo que Guatemala tiene para ofrecer

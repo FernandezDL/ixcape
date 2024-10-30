@@ -5,10 +5,12 @@ import Footer from './components/footer/footer';
 import React, { useState, useRef } from 'react';
 import Test from './test/test';
 import Calendario from './calendario/calendario';
+import Inscripcion from './inscripcion/incripcion';
 
 function App() {
   const [showTest, setShowTest] = useState(false);
   const [showCalendario, setShowCalendario] = useState(false);
+  const [showInscripcion, setShowInscripcion] = useState(false);
 
   const textoRutasRef = useRef(null); // Referencia a la sección de RUTAS CULTURALES
 
@@ -21,16 +23,24 @@ function App() {
   };
 
   const handleCloseTest = () => {
-      setShowTest(false);
+    setShowTest(false);
   };
 
   const handleClickCalendario = () => {
-      setShowCalendario(true);
+    setShowCalendario(true);
   };
   
   const handleCloseCalendario = () => {
-      setShowCalendario(false);
+    setShowCalendario(false);
   }; 
+
+  const handleClickInscripcion = () => {
+    setShowInscripcion(true);
+  };
+
+  const handleCloseInscripcion = () => {
+    setShowInscripcion(false);
+  };
 
   return (
     <div className="App">
@@ -109,7 +119,7 @@ function App() {
         <div className="textoTarjetas">
           <div className="tituloTarjetas">INSCRÍBETE</div>
           <div className="textoTarjetas2">
-            <button className="tarjetaButton tarjetaButtonRosa">
+            <button className="tarjetaButton tarjetaButtonRosa" onClick={handleClickInscripcion}>
               <img src="img/home/botonFlechaRosa.svg" alt="Botón con flecha rosa" className="tarjetaImg" />
             </button>
             <div className="cuerpoTarjetas">
@@ -128,13 +138,19 @@ function App() {
 
       {showTest && (
           <div className="culturaContainer show">
-              <Test onClose={handleCloseTest} />
+            <Test onClose={handleCloseTest} />
           </div>
       )}
 
       {showCalendario && (
         <div className="culturaContainer show">
-            <Calendario onClose={handleCloseCalendario} />
+          <Calendario onClose={handleCloseCalendario} />
+        </div>
+      )}
+
+      {showInscripcion && (
+        <div className="culturaContainer show">
+          <Inscripcion onClose={handleCloseInscripcion} />
         </div>
       )}
       

@@ -127,7 +127,7 @@
     background-color: #5547FF;
 }
 
-.buttonContainer{
+.calendarioButtonContainer{
     width: 43px;
     height: 43px;
     background-image: url('../../public/img/cultura/botonRosa.svg');
@@ -139,7 +139,7 @@
     cursor: pointer;
 }
 
-.buttonContainer:hover {
+.calendarioButtonContainer:hover {
     background-image: url('../../public/img/cultura/botonAmarillo.svg');
 }
 

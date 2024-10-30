@@ -4,11 +4,7 @@
     background-color: #161616;
 }
 
-.container2{
-    padding: 35px;
-}
-
-.closeButtonContainer {
+.culturaButtonContainer {
     width: 63px;
     height: 63px;
     border: none;
@@ -21,13 +17,15 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    margin-top: 20px;
+    margin-left: 40px;
 }
 
-.closeButtonContainer:hover {
+.culturaButtonContainer:hover {
     background-image: url('../../public/img/cultura/botonAmarillo.svg');
 }
 
-.cards{
+.cardsCultura{
     width: 45%;
     height: 200px;
     border-radius: 30px;
@@ -36,11 +34,28 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     color: white;
     font-size: 45px;
 }
 
-.cards img{
+.imgPng{
+    height: 100%;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+.artesanos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
+    z-index: 0;
+}
+
+.logos{
     height: 150px;
     width: 40%;
 }
@@ -50,18 +65,30 @@
 }
 
 .pinkCard {
-    background-color: #E20077;
+    background-image: url("../../public/img/cultura/artesanos.svg");
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: end;
 }
 
 .yellowCard {
-    background-color: #FBB016;
+    background-image: url("../../public/img/cultura/documentales.svg");
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: end;
 }
 
 .greenCard {
     background-color: #4DD973;
 }
 
-.fila{
+.filaCultura{
     display: flex;
     justify-content: space-evenly;
 }
@@ -79,4 +106,8 @@
 
 .cardTexts p{
     margin: 0;
+}
+
+.otras{
+    margin-right: 20px;
 }

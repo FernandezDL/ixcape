@@ -20,7 +20,7 @@ export default function Calendario({onClose}){
             </div>
 
             <div className="calendarioTextoContainer">
-                <button className="buttonContainer" onClick={onClose}></button>
+                <button className="calendarioButtonContainer" onClick={onClose}></button>
                 <p>
                     <span className="pinkTextCalendario">Planifica tu próximo viaje</span><br/>
                     Selecciona el mes que te favorece y descubrelas rutas <br/>

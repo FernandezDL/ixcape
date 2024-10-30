@@ -53,7 +53,7 @@
     font-weight: 800;
 }
 
-.buttonContainer{
+.testButtonContainer{
     width: 43px;
     height: 43px;
     background-image: url('../../public/img/cultura/botonRosa.svg');
@@ -65,7 +65,7 @@
     cursor: pointer;
 }
 
-.buttonContainer:hover {
+.testButtonContainer:hover {
     background-image: url('../../public/img/cultura/botonAmarillo.svg');
 }
 
