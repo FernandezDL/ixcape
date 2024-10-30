@@ -2,13 +2,23 @@ import './App.css';
 import Header from './components/header/header';
 import Card from './components/card/card';
 import Footer from './components/footer/footer';
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import Test from './test/test';
 
 function App() {
+  const [showTest, setShowTest] = useState(false);
   const textoRutasRef = useRef(null); // Referencia a la sección de RUTAS CULTURALES
 
   const handleScrollToRutas = () => {
     textoRutasRef.current.scrollIntoView({ behavior: 'smooth' }); // Hace scroll suave hasta la sección
+  };
+
+  const handleClickTest = () => {
+    setShowTest(true);
+  };
+
+  const handleCloseTest = () => {
+      setShowTest(false);
   };
 
   return (
@@ -58,7 +68,7 @@ function App() {
         <div className="textoTarjetas">
           <div className="tituloTarjetas">HAZTE <br/> EL TEST</div>
           <div className="textoTarjetas2">
-            <button className="tarjetaButton tarjetaButtonAzul">
+            <button className="tarjetaButton tarjetaButtonAzul" onClick={handleClickTest}>
               <img src="img/home/Component.svg" alt="Botón con flecha azul" className="tarjetaImg" />
             </button>
             <div className="cuerpoTarjetas">
@@ -105,6 +115,12 @@ function App() {
         Y LA VIVAS CON NOSOTROS
       </div>
 
+      {showTest && (
+          <div className="culturaContainer show">
+              <Test onClose={handleCloseTest} />
+          </div>
+      )}
+      
       <Footer/>
     </div>
   );

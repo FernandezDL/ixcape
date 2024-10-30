@@ -1,0 +1,190 @@
+.testMainContainer{
+    width: 90%;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+}
+
+.container2{
+    height: 80%;
+    padding: 15px 55px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container1{
+    width: 90%;
+    padding: 15px 35px 15px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 100px;
+}
+.testHeader{
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.firstColumnHeader{
+    background-color: #E20077;
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.secondColumnHeader{
+    background-color: #1B1B1B;
+    color: white;
+}
+
+.firstRowSC{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.buttonContainer{
+    width: 43px;
+    height: 43px;
+    background-image: url('../../public/img/cultura/botonRosa.svg');
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.buttonContainer:hover {
+    background-image: url('../../public/img/cultura/botonAmarillo.svg');
+}
+
+.flechaButton{
+    width: 56px;
+    height: 44px;
+
+    margin-top: 25px;
+    background-image: url("../../public/img/test/flechaAmarilla.svg");
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.yellowText{
+    color: #F6BF2B;
+}
+
+.texto{
+    display: flex;
+}
+
+.cuerpoContainer{
+    flex-grow: 1;
+
+    margin: 25px 55px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cuerpoContainer button{
+    border: transparent;
+    border-radius: 20px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.firstRowCC{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    width: 100%;
+    height: 20%;
+}
+
+.firstRowCC button{
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.secondRowCC{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+    width: 100%;
+    height: 75%;
+
+    background-color: azure;
+}
+
+.culturaContainer {
+    position: fixed; /* Fijamos la posición en la pantalla */
+    top: 0;
+    left: 100%; /* Inicia fuera de la pantalla */
+    width: 100%;
+    height: 100vh; /* Asegura que cubra toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    z-index: 10; /* Más alto que .card para que esté encima */
+    transition: transform 0.5s ease; /* Transición suave */
+    transform: translateX(0); /* Estado inicial, fuera de la pantalla */
+}
+
+.culturaContainer.show {
+    transform: translateX(-100%); /* Mueve el componente hacia la izquierda */
+}
+
+.firstBttn{
+    background-image: url("../../public/img/test/firstBttn.svg");
+
+    color: white;
+}
+
+.secondBttn{
+    background-image: url("../../public/img/test/secondBttn.svg");
+}
+
+.artesaniasBttn{
+    background-image: url("../../public/img/test/artesanias.svg");
+}
+
+.comIndigenasBttn{
+    background-image: url("../../public/img/test/comIndigenas.svg");
+}
+
+.gastronomiaBttn{
+    background-image: url("../../public/img/test/gastronomia.svg");
+}
+
+.naturalezaBttn{
+    background-image: url("../../public/img/test/naturaleza.svg");
+}
+
+.festividadesBttn{
+    background-image: url("../../public/img/test/festividades.svg");
+}
