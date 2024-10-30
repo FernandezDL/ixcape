@@ -1,12 +1,24 @@
 import "./test.css";
+import Calendario from "../calendario/calendario";
+import React, {useState} from "react";
 
 export default function Test({onClose}){
+    const [showCalendario, setShowCalendario] = useState(false);
+
+    const handleClickCalendario = () => {
+        setShowCalendario(true);
+    };
+    
+    const handleCloseCalendario = () => {
+        setShowCalendario(false);
+    }; 
+
     return(
         <div className="testMainContainer">
             <div className="testHeader">
                 <div className="firstColumnHeader">
                     <div className="container1">
-                        <button className="flechaButton" onClick={onClose}></button>
+                        <button className="flechaAmarillaButton" onClick={onClose}></button>
 
                         <div className="texto">
                             T<span className="yellowText">E</span>ST
@@ -28,18 +40,24 @@ export default function Test({onClose}){
 
             <div className="cuerpoContainer">
                 <div className="firstRowCC">
-                    <button className="firstBttn">HISTORIA & CULTURA</button>
-                    <button className="secondBttn">TEJIDOS & TEXTILES</button>
+                    <button className="firstBttn" onClick={handleClickCalendario}>HISTORIA & CULTURA</button>
+                    <button className="secondBttn" onClick={handleClickCalendario}>TEJIDOS & TEXTILES</button>
                 </div>
 
                 <div className="secondRowCC">
-                    <button className="artesaniasBttn">ARTESANÍAS & TRADICIONES</button>
-                    <button className="gastronomiaBttn">GASTRONOMÍA LOCAL</button>
-                    <button className="naturalezaBttn">NATURALEZA & AVENTURA</button>
-                    <button className="comIndigenasBttn">COMUNIDADES INDÍGENAS</button>
-                    <button className="festividadesBttn">FESTIVIDADES & CELEBRACIONES</button>
+                    <button className="artesaniasBttn" onClick={handleClickCalendario}>ARTESANÍAS & TRADICIONES</button>
+                    <button className="gastronomiaBttn" onClick={handleClickCalendario}>GASTRONOMÍA LOCAL</button>
+                    <button className="naturalezaBttn" onClick={handleClickCalendario}>NATURALEZA & AVENTURA</button>
+                    <button className="comIndigenasBttn" onClick={handleClickCalendario}>COMUNIDADES INDÍGENAS</button>
+                    <button className="festividadesBttn" onClick={handleClickCalendario}>FESTIVIDADES & CELEBRACIONES</button>
                 </div>
             </div>
+
+            {showCalendario && (
+                <div className="culturaContainer show">
+                    <Calendario onClose={handleCloseCalendario} />
+                </div>
+            )}
         </div>
     )
 }

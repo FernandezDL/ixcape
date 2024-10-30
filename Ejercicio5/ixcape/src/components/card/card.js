@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CulturaHistoria from "../../culturaHistoria/culturaHistoria";
 import Voces from "../../voces/voces";
 
-export default function Card() {
+export default function Card({onScrollToRutas}) {
     const [showCulturaHistoria, setShowCulturaHistoria] = useState(false);
     const [showVoces, setShowVoces] = useState(false);
 
@@ -45,7 +45,7 @@ export default function Card() {
                         </div>
 
                         <div className="secondRow">
-                            <button className="flechaButton">
+                            <button className="flechaButton" onClick={onScrollToRutas}>
                                 <img src="img/card/flecha.svg" alt="flecha" className="flechaImg" />
                             </button>
                             <div>RUTAS <br />CULTURALES</div>

@@ -4,9 +4,12 @@ import Card from './components/card/card';
 import Footer from './components/footer/footer';
 import React, { useState, useRef } from 'react';
 import Test from './test/test';
+import Calendario from './calendario/calendario';
 
 function App() {
   const [showTest, setShowTest] = useState(false);
+  const [showCalendario, setShowCalendario] = useState(false);
+
   const textoRutasRef = useRef(null); // Referencia a la sección de RUTAS CULTURALES
 
   const handleScrollToRutas = () => {
@@ -20,6 +23,14 @@ function App() {
   const handleCloseTest = () => {
       setShowTest(false);
   };
+
+  const handleClickCalendario = () => {
+      setShowCalendario(true);
+  };
+  
+  const handleCloseCalendario = () => {
+      setShowCalendario(false);
+  }; 
 
   return (
     <div className="App">
@@ -83,7 +94,7 @@ function App() {
         <div className="textoTarjetas">
           <div className="tituloTarjetas">VE EL <br/> CALENDARIO</div>
           <div className="textoTarjetas2">
-            <button className="tarjetaButton tarjetaButtonAmarilla">
+            <button className="tarjetaButton tarjetaButtonAmarilla" onClick={handleClickCalendario}>
               <img src="img/home/botonFlechaAmarilla.svg" alt="Botón con flecha amarilla" className="tarjetaImg" />
             </button>
             <div className="cuerpoTarjetas">
@@ -119,6 +130,12 @@ function App() {
           <div className="culturaContainer show">
               <Test onClose={handleCloseTest} />
           </div>
+      )}
+
+      {showCalendario && (
+        <div className="culturaContainer show">
+            <Calendario onClose={handleCloseCalendario} />
+        </div>
       )}
       
       <Footer/>
