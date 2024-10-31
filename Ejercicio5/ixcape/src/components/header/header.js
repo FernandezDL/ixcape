@@ -11,7 +11,7 @@
                     <p>CONTACTA CON ARTESANOS</p>
                 </div>
                 
-                <img src='img/header/logo.svg' alt='Logo icono' className='logo'/>
+                <img src='img/header/logo.svg' alt='Logo icono' className='logoFigura'/>
             </div>
         )
     }

@@ -1,0 +1,224 @@
+.pagoMainContainer {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.headerPago {
+    width: 100%;
+    height: 15%;
+    background-image: url("../../public/img/datosPago/headerAmarillo.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 123px;
+    height: 89px;
+    background-image: url("../../public/img/header/letrasNegras.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.logo:hover{
+    background-image: url("../../public/img/header/letrasRosadas.svg");
+}
+
+.targetaSVG{
+    width: 80%;
+    height: auto;
+}
+
+.containerTarjeta {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pinkLetter{
+    color: #E20077;
+}
+
+.returnBttn {
+    width: 73px;
+    height: 73px;
+}
+
+.tarjetaLetrasContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjetaLetrasContainer h1{
+    color: #161616;
+    font-size: 55px;
+    font-weight: 800;
+    margin-top: 0;
+}
+
+.buttonsContainer{
+    width: 80%;
+    height: 50px;
+    display: flex;
+
+    margin-top: 50px;
+}
+
+.firstButton{
+    width: 50%;
+    background-image: url("../../public/img/datosPago/boton1.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.secondButton{
+    width: 50%;
+    background-image: url("../../public/img/datosPago/boton2.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.fondoNegro {
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../public/img/datosPago/picos.svg");
+    background-size: contain;
+    background-position: start;
+    background-repeat: repeat-x;
+    padding-top: 2.5%;
+}
+
+.parteNegra {
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anotherCardContainer {
+    width: 70%;
+    height: 3500px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.pinkCard1, .blueCard1, .greenCard1, .yellowCard1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.pinkCard1 {
+    background-color: #E20077;
+}
+
+.blueCard1 {
+    background-color: #5547FF;
+}
+
+.greenCard1 {
+    background-color: #4DD973;
+}
+
+.yellowCard1 {
+    background-color: #FBB016;
+}
+
+.secondRowCard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.inputField {
+    width: 80%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-size: 1em;
+    color: #161616;
+    outline: none;
+}
+
+.inputField::placeholder {
+    color: #AAA;
+    font-weight: bold;
+}
+
+.paymentButtonsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.cancelButton, .payButton {
+    width: 45%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.cancelButton {
+    background-color: #FFFFFF;
+    color: #161616;
+}
+
+.cancelButton:hover {
+    background-color: #FBB016;
+    color: #161616;
+}
+
+.payButton {
+    background-color: #5547FF;
+    color: white;
+}
+
+.payButton:hover {
+    background-color: #E20077;
+    color: #161616;
+}
+
+.footer{
+    width: 100%;
+    height: 1500px;
+
+    background-image: url("../../public/img/datosPago/footer.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+}

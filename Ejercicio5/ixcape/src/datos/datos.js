@@ -1,6 +1,14 @@
 import "./datos.css";
+import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Datos({onClose}){
+    const navigate = useNavigate();
+
+    const handleClickDatos = () => {
+        navigate("/datos-pago")
+    };
+
     return(
         <div className="datosMainContainer">
             <div className="datosContainer">
@@ -27,8 +35,14 @@ export default function Datos({onClose}){
                     <label for="terms">ACEPTO LOS TÉRMINOS Y CONDICIONES</label>
                 </div>
 
-                <button className="pagoBttn">MÉTODO DE PAGO</button>
+                <button className="pagoBttn" onClick={handleClickDatos}>MÉTODO DE PAGO</button>
             </div>
+
+            {/* {showDatos && (
+                <div className="culturaContainer show">
+                    <DatosPago/>
+                </div>
+            )} */}
         </div>
     )
 }
