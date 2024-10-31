@@ -5,8 +5,6 @@ import Footer from '../components/footer/footer';
 import Test from '../test/test';
 import Calendario from '../calendario/calendario';
 import Inscripcion from '../inscripcion/incripcion';
-// import Datos from './components/datos/datos'; // Importa el componente `Datos`
-// import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import React, { useState, useRef } from 'react';
 
 function HomePage() {
@@ -15,7 +13,6 @@ function HomePage() {
   const [showInscripcion, setShowInscripcion] = useState(false);
 
   const textoRutasRef = useRef(null);
-  // const navigate = useNavigate(); // Para navegación programática
 
   const handleScrollToRutas = () => {
     textoRutasRef.current.scrollIntoView({ behavior: 'smooth' });

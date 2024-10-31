@@ -1,0 +1,45 @@
+.popMainContainer {
+    width: 80%;
+    height: 600px;
+
+    background-image: url("../../public/img/pop/fondo.svg");
+    background-color: #E8E8E8;
+    background-size: contain;
+    background-position: start;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+}
+
+.popMainContainer h1{
+    font-size: 65px;
+    font-weight: 800;
+}
+
+.letterBttnContainer{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.blackBttn{
+    width: 85%;
+    height: 20%;
+
+    background-image: url("../../public/img/pop/boton.svg");
+    background-size: cover;
+    background-position: start;
+    background-repeat: no-repeat;
+    border-color: transparent;
+
+    color: #F6BF2B;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: start;
+    padding-left: 80px;
+    cursor: pointer;
+}

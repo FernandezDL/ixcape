@@ -1,13 +1,20 @@
 import "./datosPago.css";
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import Pop from "../pop/pop";
 
 export default function DatosPago() {
     const navigate = useNavigate();
 
+    const [showPop, setShowPop] = useState(false);
+
     const handleClickHome = () => {
         navigate("/")
     };
+
+    const handleClickPop= ()=>{
+        setShowPop(true);
+    }
 
     return (
         <div className="pagoMainContainer">
@@ -50,12 +57,18 @@ export default function DatosPago() {
                     {/* Botones de Cancelar y Pagar */}
                     <div className="paymentButtonsContainer">
                         <button className="cancelButton" onClick={handleClickHome}>CANCELAR PAGO</button>
-                        <button className="payButton">PAGAR</button>
+                        <button className="payButton" onClick={handleClickPop}>PAGAR</button>
                     </div>
 
                     <div className="footer">.</div>
                 </div>
             </div>
+
+            {showPop && (
+                <div className="culturaContainer show">
+                    <Pop onClose={handleClickPop} />
+                </div>
+            )}
         </div>
     )
 }

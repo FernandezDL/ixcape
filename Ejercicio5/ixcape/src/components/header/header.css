@@ -12,11 +12,23 @@
 .headerImage {
     width: 124px;
     height: 80px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 .logoFigura {
     width: 56px;
     height: 56px;
+    background-image: url('../../../public/img/header/logo.svg');
+    border-color: transparent;
+    background-color: transparent;
+    background-size: contain;
+    background-position: start;
+    background-repeat: no-repeat;
+}
+
+.logoFigura:hover{
+    background-image: url("../../../public/img/header/logoHover.svg");
 }
 
 .optionsContainer {
